@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no minimal-ui">
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		<video src="" id="video"></video>
+		<script>
+			var v = document.getElementById('video');
+			navigator.mediaDevices.getUserMedia({
+				video: true
+			}).then(function(mediaStream){
+				console.log(mediaStream);
+				v.src = window.URL.createObjectURL(mediaStream);
+				console.log(v.src)
+			});
+		</script>
+	</body>
+</html>
