@@ -27,6 +27,7 @@
 				v.src = window.URL.createObjectURL(mediaStream);
 				video.onloadedmetadata = function(e) {
 					v.play();
+					alert('play');
 				};
 			});
 		</script>
